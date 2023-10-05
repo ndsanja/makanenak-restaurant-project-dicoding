@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  &:focus {
+    outline: green;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-offset: 1px;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background-color: white;
+  color: green;
+  z-index: 100;
+
+  &:focus {
+    top: 0;
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 16px;
+  padding-block: 16px;
+
+  @media (min-width: 600px) {
+    padding-inline: 16px;
+  }
+
+  @media (min-width: 900px) {
+    padding-inline: 32px;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+
+    @media (min-width: 600px) {
+      font-size: 32px;
+    }
+  }
+
+  ul {
+    align-items: center;
+    justify-content: end;
+    gap: 16px;
+    display: none;
+
+    @media (min-width: 600px) {
+      display: flex;
+    }
+
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    padding-inline: 16px;
+    padding-block: 10px;
+    border-radius: 8px;
+    background-color: green;
+    color: white;
+  }
+
+  #mobile-menu {
+    display: block;
+
+    @media (min-width: 600px) {
+      display: none;
+    }
+
+    button {
+      padding: 10px;
+      color: white;
+      background-color: green;
+      border-radius: 8px;
+      border: none;
+    }
+
+    nav {
+      background-color: white;
+      position: fixed;
+      z-index: 100;
+      inset: 0;
+
+      button {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+      }
+
+      ul {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 38px;
+      }
+
+      a {
+        color: green !important;
+        background: transparent;
+        font-weight: 700;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+main {
+  max-width: 1280px;
+  margin-inline: auto;
+
+  #hero {}
+
+  #catalogs {
+    width: 100%;
+    max-width: 1080px;
+    margin-top: 32px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+
+    #restaurant-list {
+      margin-top: 32px;
+      width: 100%;
+      display: grid;
+      gap: 32px;
+      grid-template-columns: repeat(1, 1fr);
+
+      @media (min-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+      @media (min-width: 900px) {
+        grid-template-columns: repeat(3, 1fr);
+
+      }
+    }
+  }
+
+  #to-top {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    text-decoration: none;
+    padding-inline: 16px;
+    padding-block: 10px;
+    border-radius: 8px;
+    background-color: green;
+    color: white;
+  }
+}
+
+.restaurant-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  .card-media {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .card-city-label {
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    padding-inline: 8px;
+    padding-block: 8px;
+    background-color: green;
+    color: white;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+
+    .rating {
+      font-weight: 700;
+    }
+
+    .title {
+      color: green;
+      text-decoration: underline;
+    }
+
+    .description {
+      font-size: 14px;
+      line-height: 1.75;
+    }
+  }
+}
+
+footer {
+  margin-top: 32px;
+  border-top: 1px dashed black;
+  padding-block: 16px;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .desc {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .online {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-top: 10px;
+
+    p {
+      font-size: 12px;
+    }
+
+    a {
+      font-size: 12px;
+    }
+  }
+}
