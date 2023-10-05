@@ -82,7 +82,10 @@ header {
   a {
     text-decoration: none;
     padding-inline: 16px;
-    padding-block: 10px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
     background-color: green;
     color: white;
@@ -96,7 +99,11 @@ header {
     }
 
     button {
-      padding: 10px;
+      height: 44px;
+      width: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: white;
       background-color: green;
       border-radius: 8px;
@@ -110,6 +117,11 @@ header {
       inset: 0;
 
       button {
+        height: 44px;
+        width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
         right: 16px;
         top: 16px;
@@ -175,8 +187,11 @@ main {
     right: 16px;
     bottom: 16px;
     text-decoration: none;
-    padding-inline: 16px;
-    padding-block: 10px;
+    height: 44px;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
     background-color: green;
     color: white;
