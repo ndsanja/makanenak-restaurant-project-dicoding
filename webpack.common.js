@@ -33,13 +33,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: path.resolve(__dirname, 'src/templates/index.html'),
+      template: path.resolve(__dirname, 'src/index.html'),
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
           from: path.resolve(__dirname, 'src/public/'),
-          to: path.resolve(__dirname, 'dist/'),
+          to: path.resolve(__dirname, 'dist/public/'),
         },
       ],
     }),
