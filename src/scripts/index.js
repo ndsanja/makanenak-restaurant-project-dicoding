@@ -12,15 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     restaurantListcontainer.insertAdjacentHTML('afterbegin', data.restaurants.map((item, index) =>
         `
-        <div tabindex=${index + 5} class="restaurant-card">
-    <img class="card-media" src="${item.pictureId}" alt="gambar ilustrasi ${item.name}" />
-    <p class="card-city-label">${item.city}</p>
-    <div class="card-body">
-    <p class="rating">Rating: ${item.rating}</p>
-    <h2 class="title">${item.name}</h2>
-    <p class="description">${item.description}</p>
-    </div>
-    </div>
+        <div tabindex=${index + 2} class="restaurant-card">
+            <img class="card-media" src="${item.pictureId}" alt="gambar ilustrasi ${item.name}" />
+            <p class="card-city-label">${item.city}</p>
+            <div class="card-body">
+            <p class="rating">Rating: ${item.rating}</p>
+            <h2 class="title">${item.name}</h2>
+            <p class="description">${item.description}</p>
+            </div>
+        </div>
     `
     ).join(''))
 

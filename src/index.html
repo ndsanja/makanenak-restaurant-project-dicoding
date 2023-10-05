@@ -13,29 +13,26 @@
     <title>MakanEnak Official Web</title>
   </head>
   <body>
-    <a tabindex="0" href="#main-content" class="skip-link">Menuju ke konten</a>
+    <a href="#main-content" class="skip-link">Menuju ke konten</a>
     <header>
-      <h1 id="main-title" tabindex="1">MakanEnak</h1>
+      <h1 id="main-title">MakanEnak</h1>
       <nav>
         <ul>
           <li>
-            <a tabindex="2" href="/">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a tabindex="3" href="#">Favorite</a>
+            <a href="#">Favorite</a>
           </li>
           <li>
-            <a
-              tabindex="4"
-              href="https://niladwisanja.vercel.app/"
-              target="_blank"
+            <a href="https://niladwisanja.vercel.app/" target="_blank"
               >Abaout Us</a
             >
           </li>
         </ul>
       </nav>
       <nav id="mobile-menu">
-        <button tabindex="1" id="open-button" aria-label="open mobile menu">
+        <button id="open-button" aria-label="open mobile menu">
           <i
             aria-label="open mobile menu"
             class="fa-solid fa-bars"
@@ -43,7 +40,7 @@
           ></i>
         </button>
         <nav id="mobile-menu-list" class="hidden">
-          <button tabindex="5" id="close-button" aria-label="close mobile menu">
+          <button id="close-button" aria-label="close mobile menu">
             <i
               aria-label="close mobile menu"
               class="fa-solid fa-xmark"
@@ -52,16 +49,13 @@
           </button>
           <ul>
             <li>
-              <a tabindex="2" href="/">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a tabindex="3" href="#">Favorite</a>
+              <a href="#">Favorite</a>
             </li>
             <li>
-              <a
-                tabindex="4"
-                href="https://niladwisanja.vercel.app/"
-                target="_blank"
+              <a href="https://niladwisanja.vercel.app/" target="_blank"
                 >Abaout Us</a
               >
             </li>
@@ -74,7 +68,7 @@
         <img src="./public/images/heros/hero-image_4.jpg" width="450" alt="" />
       </section>
       <section id="catalogs">
-        <h2 tabindex="5">Explore Restaurant</h2>
+        <h2 tabindex="1">Explore Restaurant</h2>
         <div id="restaurant-list"></div>
       </section>
 
@@ -92,6 +86,7 @@
       <div class="online">
         <p>Online version visit</p>
         <a
+          tabindex="-1"
           href="https://makan-enak.netlify.app"
           target="_blank"
           rel="noopener noreferrer"
