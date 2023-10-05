@@ -13,7 +13,8 @@
     <title>MakanEnak Official Web</title>
   </head>
   <body>
-    <a href="#main-content" class="skip-link">Menuju ke konten</a>
+    <a tabindex="0" href="#catalogs" class="skip-link">Menuju ke konten</a>
+
     <header>
       <h1 id="main-title">MakanEnak</h1>
       <nav>
@@ -63,16 +64,15 @@
         </nav>
       </nav>
     </header>
-    <main id="main-content">
+    <main>
       <section id="hero">
         <img src="./public/images/heros/hero-image_4.jpg" width="450" alt="" />
       </section>
       <section id="catalogs">
-        <h2 tabindex="1">Explore Restaurant</h2>
+        <h2 tabindex="0">Explore Restaurant</h2>
         <div id="restaurant-list"></div>
       </section>
-
-      <a aria-label="back to top" href="#main-title" id="to-top">
+      <a aria-label="back to top" href="#main-title" id="to-top" class="hidden">
         <i
           aria-label="back to top"
           class="fa-solid fa-caret-up"

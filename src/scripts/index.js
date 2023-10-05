@@ -10,9 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileMenuList = document.getElementById('mobile-menu-list')
     const toTopButton = document.getElementById('to-top')
 
+    window.addEventListener('scroll', () => {
+        if (window.scrollY >= 100) {
+            toTopButton.classList.remove('hidden')
+        } else {
+            toTopButton.classList.add('hidden')
+        }
+    })
+
     restaurantListcontainer.insertAdjacentHTML('afterbegin', data.restaurants.map((item, index) =>
         `
-        <div tabindex=${index + 2} class="restaurant-card">
+        <div tabindex=0 class="restaurant-card">
             <img class="card-media" src="${item.pictureId}" alt="gambar ilustrasi ${item.name}" />
             <p class="card-city-label">${item.city}</p>
             <div class="card-body">
